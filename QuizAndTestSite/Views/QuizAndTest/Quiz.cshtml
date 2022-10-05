@@ -1,0 +1,87 @@
+﻿@{
+
+}
+
+@model IEnumerable<QuestionModel>
+
+<div class="text-center container">
+    <h1 class="display-4 text-capitalize fw-bold purpleText">Welcome to the quiz!</h1>
+
+    <form method="post" asp-controller="QuizAndTest" asp-action="Quiz">
+
+
+
+        <div class="form-group">
+            @foreach (var question in Model)
+            {
+                <label for="question_@question" class="text-capitalize fw-bold purpleText">@question.Content</label>
+
+                <select name="chosenoption_@question.Id" class="form-control">
+                    <option value="" disabled selected>Select your option</option>
+                    <option value="@question.Option_1">@question.Option_1</option>
+                    <option value="@question.Option_2">@question.Option_2</option>
+                    <option value="@question.Option_3">@question.Option_3</option>
+                    <option value="@question.Option_4">@question.Option_4</option>
+                </select>
+
+
+            }
+        </div>
+
+
+        <br />
+        @*<select name="QuizModelId" hidden class="form-control">
+            <option value="QuizModelId">QuizModelId</option>
+        </select>*@
+
+        @*<input type="text" style="accent-color: mediumpurple" name="QuizModelId" hidden />*@
+
+
+
+
+
+        @*@foreach (var item in Model)
+        {
+        <h1>@item.Content</h1>
+        <div class="form-group">
+        <label for="fromAirport">@item.Content</label>
+        <select class="form-control">
+        @foreach(var x in item.Optionlar){
+        <option>@x.Content</option>
+        }
+        </select>
+        </div>
+        }*@
+
+
+
+
+
+
+
+        @*<div class="form-group">
+        @for (int i = 1; i < Model.Count() + 1; i++)
+        {
+        <label for="Question_@i+1">@Model.FirstOrDefault(u => u.Id == i).Content</label>
+
+        <select asp-for="@Model.FirstOrDefault(u => u.Id == i).ChosenOption" class="form-control" name="Option{@i}">
+        <option>@Model.FirstOrDefault(u => u.Id == i).Option1</option>
+        <option>@Model.FirstOrDefault(u => u.Id == i).Option2</option>
+        <option>@Model.FirstOrDefault(u => u.Id == i).Option3</option>
+        <option>@Model.FirstOrDefault(u => u.Id == i).Option4</option>
+        </select>
+
+        }
+        </div>*@
+
+        <button class="btn alert-primary mt-1 purpleButton whiteText" type="submit">Send</button>
+        <a asp-controller="QuizAndTest" asp-action="Quizes" class="btn btn-secondary" style="width:150px">
+            Back to Menu
+        </a>
+    </form>
+
+
+</div>
+
+
+

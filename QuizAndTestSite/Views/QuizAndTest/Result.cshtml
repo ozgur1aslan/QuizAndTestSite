@@ -1,0 +1,39 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model ResultModel
+
+@*@if (Model.CorrectAnswerCount == 0 || Model.CorrectAnswerCount == 1)
+{
+    <h1>Your have answered @Model.CorrectAnswerCount question correctly</h1>
+} else
+{
+    <h1>Your have answered @Model.CorrectAnswerCount questions correctly</h1>
+}
+
+<h1>Your score is: @Model.Score</h1>*@
+
+<div class="text-center">
+    <div class="mainText">
+        <h1 class="display-4 text-capitalize fw-bold purpleText">Your Quiz Result</h1>
+        @if (Model.CorrectAnswerCount == 0 || Model.CorrectAnswerCount == 1)
+        {
+            <h2>Your have answered @Model.CorrectAnswerCount question correctly</h2>
+        }
+        else
+        {
+            <h2>Your have answered @Model.CorrectAnswerCount questions correctly</h2>
+        }
+    </div>
+    @*<img class="mainImage" style="height:300px; width:512px" src="~/images/User.jpg" />*@
+    <br />
+    <h1 class="display-4 text-capitalize fw-bold purpleText">Your score is: </h1>
+    <h1>@Model.Score</h1>
+
+
+    <br /><br />
+
+</div>

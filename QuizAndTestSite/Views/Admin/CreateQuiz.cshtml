@@ -1,0 +1,41 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model QuizModel
+
+<div class="text-center container">
+    <h1 class="purpleText">Create your own pizza!</h1>
+    <form method="post" class="mx-auto mt-5 mb-5 px-5 pt-5 pb-5 rounded-5 alert-light col-4">
+
+        @*<div asp-validation-summary="All"></div>*@
+
+        <label asp-for="QuizName" class="control-label">Type Quiz Name</label>
+        <br />
+        <input type="text" style="accent-color: mediumpurple" asp-for="QuizName"
+               placeholder="Type quiz name" />
+        <br />
+        <span asp-validation-for="QuizName" class="text-danger"></span>
+
+        <br />
+
+        <div class="form-group">
+            <label asp-for="Category" class="control-label">Select Quiz Category</label>
+            <select asp-for="Category" class="form-control" asp-items="ViewBag.CategoryModelCategoryName"></select>
+        </div>
+        <br />
+        <span asp-validation-for="Category" class="text-danger"></span>
+
+        <br />
+
+        
+
+        <button class="btn alert-primary mt-1 purpleButton whiteText" type="submit">Create Quiz</button>
+        <a asp-controller="Admin" asp-action="QuizList" class="btn btn-secondary" style="width:150px">
+            Back to Menu
+        </a>
+    </form>
+
+</div>

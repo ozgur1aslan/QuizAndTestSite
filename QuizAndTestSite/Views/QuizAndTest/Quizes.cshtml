@@ -1,0 +1,26 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model IEnumerable<QuizModel>
+
+<div class="text-center">
+    <div class="mainText">
+        <h1 class="display-4 text-capitalize fw-bold purpleText">Quizes</h1>
+        <h2 class="mainSubtitle purpleText">Here are our quizes</h2>
+    </div>
+    <img class="mainImage" style="height:300px; width:512px" src="~/images/Quizz.png" />
+
+    <br />
+
+    @foreach (var quiz in Model)
+    {
+        <a class="btn btn-primary btn-square-md" style="float: none; background-color: mediumpurple; width: 200px; height; 400px" asp-area="" asp-controller="QuizAndTest" asp-action="Quiz" asp-route-id="@quiz.Id">@quiz.QuizName</a>
+    }
+
+
+    <br /><br />
+
+</div>

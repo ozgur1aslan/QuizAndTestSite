@@ -1,0 +1,84 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model QuestionModel
+
+<div class="text-center container">
+    <h1 class="purpleText">Create a Category!</h1>
+    <form method="post" class="mx-auto mt-5 mb-5 px-5 pt-5 pb-5 rounded-5 alert-light col-4">
+
+        @*<div asp-validation-summary="All"></div>*@
+
+        <label asp-for="Content" class="control-label">Type the Question</label>
+        <br />
+        <input type="text" style="accent-color: mediumpurple" asp-for="Content"
+               placeholder="Type the Question" />
+        @*<br />
+        <span asp-validation-for="Content" class="text-danger"></span>*@
+
+        <br />
+
+        <label asp-for="Option_1" class="control-label">Type the Option 1</label>
+        <br />
+        <input type="text" style="accent-color: mediumpurple" asp-for="Option_1"
+               placeholder="Type the Option 1" />
+        @*<br />
+        <span asp-validation-for="Option_1" class="text-danger"></span>*@
+
+        <br />
+
+        <label asp-for="Option_2" class="control-label">Type the Option 2</label>
+        <br />
+        <input type="text" style="accent-color: mediumpurple" asp-for="Option_2"
+               placeholder="Type the Option 2" />
+        @*<br />
+        <span asp-validation-for="Option_2" class="text-danger"></span>*@
+
+        <br />
+
+        <label asp-for="Option_3" class="control-label">Type the Option 3</label>
+        <br />
+        <input type="text" style="accent-color: mediumpurple" asp-for="Option_3"
+               placeholder="Type the Option 3" />
+        @*<br />
+        <span asp-validation-for="Option_3" class="text-danger"></span>*@
+
+        <br />
+
+        <label asp-for="Option_4" class="control-label">Type the Option 4</label>
+        <br />
+        <input type="text" style="accent-color: mediumpurple" asp-for="Option_4"
+               placeholder="Type the Option 4" />
+        @*<br />
+        <span asp-validation-for="Option_4" class="text-danger"></span>*@
+
+        <br />
+
+        <label asp-for="CorrectOption" class="control-label">Type the Correct Option</label>
+        <br />
+        <input type="text" style="accent-color: mediumpurple" asp-for="CorrectOption"
+               placeholder="Type the Correct Option" />
+        @*<br />
+        <span asp-validation-for="CorrectOption" class="text-danger"></span>*@
+
+        <br />
+
+        <label asp-for="QuizModelId" class="control-label">Quiz Id</label>
+        <br />
+        <input type="text" style="accent-color: mediumpurple" asp-for="QuizModelId" hidden/>
+        @*<br />
+        <span asp-validation-for="QuizModelId" class="text-danger"></span>*@
+
+        <br />
+
+
+        <button class="btn alert-primary mt-1 purpleButton whiteText" type="submit">Create Question</button>
+        <a asp-controller="Admin" asp-action="QuizList" class="btn btn-secondary" style="width:150px">
+            Back to Menu
+        </a>
+    </form>
+
+</div>
