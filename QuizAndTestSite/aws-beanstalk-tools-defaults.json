@@ -1,0 +1,20 @@
+
+{
+    "region" : "us-east-2",
+    "configuration" : "Release",
+    "framework"     : "net6.0",
+    "self-contained" : false,
+    "application"    : "QuizAndTestSite",
+    "environment"    : "QuizAndTestSite-dev",
+    "enable-xray"    : false,
+    "enhanced-health-type" : "basic",
+    "additional-options"   : "\"aws:autoscaling:launchconfiguration,SecurityGroups\"=\"sg-0bffba96d4cb7a1c7\";\"aws:ec2:vpc,Subnets\"=\"subnet-0cb4e240baffcd592\"",
+    "solution-stack"       : "64bit Amazon Linux 2 v2.4.3 running .NET Core",
+    "environment-type"     : "SingleInstance",
+    "cname"                : "quizandtestsite",
+    "instance-type"        : "t2.micro",
+    "key-pair"             : "",
+    "instance-profile"     : "aws-elasticbeanstalk-ec2-role",
+    "service-role"         : "aws-elasticbeanstalk-service-role",
+    "proxy-server"         : "nginx"
+}
